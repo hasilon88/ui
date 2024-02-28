@@ -19,7 +19,7 @@ def run_quiz(questions):
             print("Correct!\n")
             score += 1
         else:
-            print("Incorrect.\n")        
+            print("\nIncorrect.\nLa bonne réponse est:", questions[randomNum]["answer"])        
         
         questions.pop(randomNum)
         input("\nPesez sur ENTER pour la proacahin question.")
