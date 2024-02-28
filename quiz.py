@@ -8,6 +8,7 @@ def readJson(path = "questions.json"):
     
 def run_quiz(questions):
     score = 0
+    totalQuestions = len(questions)
     for question in questions:
         randomNum = random.randint(0,len(questions)-1)
         
@@ -23,9 +24,10 @@ def run_quiz(questions):
             print("\nIncorrect.\nLa bonne réponse est:", questions[randomNum]["answer"])        
         
         questions.pop(randomNum)
-        input("\nPesez sur ENTER pour la prochaine question.")
+
+        input("\nPesez sur ENTER pour la prochaine question")
         os.system("cls")
         
-    print(f"Votre score est de {score}/{len(questions)}.")
+    print(f"Votre score est de {score}/{totalQuestions} ({int((score/totalQuestions) * 100)}%).")
 
 run_quiz(readJson())
