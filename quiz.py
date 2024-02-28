@@ -22,7 +22,7 @@ def run_quiz(questions):
             print("\nIncorrect.\nLa bonne réponse est:", questions[randomNum]["answer"])        
         
         questions.pop(randomNum)
-        input("\nPesez sur ENTER pour la proacahin question.")
+        input("\nPesez sur ENTER pour la prochaine question.")
         os.system("cls")
         
     print(f"Votre score est de {score}/{len(questions)}.")
