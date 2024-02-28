@@ -29,5 +29,6 @@ def run_quiz(questions):
         os.system("cls")
         
     print(f"Votre score est de {score}/{totalQuestions} ({int((score/totalQuestions) * 100)}%).")
+    input("")
 
 run_quiz(readJson())
