@@ -13,7 +13,7 @@ def run_quiz(questions):
         
         print("\n" + questions[randomNum]["question"] + "\n")
         for key, value in questions[randomNum]["options"].items():
-            print(f"{key}: {value}")
+            print(f"{key}: {value}\n")
         user_answer = input("\nVotre réponse: ").upper()
         if user_answer == questions[randomNum]["answer"]:
             print("Correct!\n")
