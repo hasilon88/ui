@@ -11,9 +11,10 @@ def run_quiz(questions):
     for question in questions:
         randomNum = random.randint(0,len(questions)-1)
         
-        print("\n" + questions[randomNum]["question"] + "\n")
+        print("\n" + questions[randomNum]["question"])
+        print(len(questions[randomNum]["question"]) * "-")
         for key, value in questions[randomNum]["options"].items():
-            print(f"{key}: {value}\n")
+            print(f"\n{key}: {value}")
         user_answer = input("\nVotre réponse: ").upper()
         if user_answer == questions[randomNum]["answer"]:
             print("Correct!\n")
